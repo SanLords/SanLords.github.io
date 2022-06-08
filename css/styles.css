@@ -600,12 +600,31 @@ p {}
     .productsr-container__item-desc {
         padding: 10px;
     }
-    .foot {
+    .about,
+    .navbar,
+    .contacts span {
         display: none;
+    }
+    .contacts {
+        flex-direction: row;
+        width: 100%;
+        padding: 0;
+        align-items: baseline;
+        font-size: 13px;
+    }
+    .phone {
+        grid-gap: 3px 10px;
+        align-items: center;
+    }
+    .contacts__mail {
+        margin: 0;
+    }
+    .contacts__mail a {
+        margin-left: 10px;
     }
     .policy {
         font-size: 12px;
-        margin-bottom: 95px;
+        margin-bottom: 70px;
     }
     .footer-menu i {
         font-size: 23px;
@@ -618,5 +637,20 @@ p {}
     }
     .fix_gallery i {
         font-size: 27px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding-top: 0;
+    }
+    .contacts {
+        flex-direction: column;
+    }
+    .contacts div:not(:first-child) {
+        margin-top: 10px;
+    }
+    .policy {
+        margin-top: 5px;
     }
 }
